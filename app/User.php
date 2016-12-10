@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'role',
     ];
 
     /**
@@ -26,4 +26,20 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * The patrols that belong to the user.
+     */
+    public function patrols()
+    {
+        return $this->belongsToMany('App\Patrol');
+    }
+
+    /**
+     * The protocols that belong to the user.
+     */
+    public function protocols()
+    {
+        return $this->belongsToMany('App\Protocol');
+    }
 }

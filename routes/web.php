@@ -11,10 +11,27 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 Auth::routes();
 
+
+Route::get('/add_user', function () {
+    return view('admin/add_user');
+});
+
+//Route::post('/add_user', function () {
+//    return view('admin/test');
+//});
+
+Route::get('/users', 'AdminController@users');
+Route::post('/add_user', 'AdminController@addUser');
+Route::get('/add_patrol', 'AdminController@showPatrolForm');
+Route::post('/add_patrol', 'AdminController@addPatrol');
+Route::get('/patrols', 'AdminController@showPatrols');
+
+Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index');
+
