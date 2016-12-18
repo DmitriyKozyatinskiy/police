@@ -86,7 +86,7 @@ eval("\nwindow._ = __webpack_require__(8);\n\n/**\n * We'll load jQuery and the 
 /* 3 */
 /***/ function(module, exports) {
 
-eval("$('.input-daterange input').each(function() {\r\n    $(this).datepicker({\r\n        clearDates: true,\r\n        format: 'yyyy-mm-dd'\r\n    });\r\n});//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9yZXNvdXJjZXMvYXNzZXRzL2pzL2RhdGVzLmpzP2ZjN2UiXSwic291cmNlc0NvbnRlbnQiOlsiJCgnLmlucHV0LWRhdGVyYW5nZSBpbnB1dCcpLmVhY2goZnVuY3Rpb24oKSB7XHJcbiAgICAkKHRoaXMpLmRhdGVwaWNrZXIoe1xyXG4gICAgICAgIGNsZWFyRGF0ZXM6IHRydWUsXHJcbiAgICAgICAgZm9ybWF0OiAneXl5eS1tbS1kZCdcclxuICAgIH0pO1xyXG59KTtcblxuXG4vLyBXRUJQQUNLIEZPT1RFUiAvL1xuLy8gcmVzb3VyY2VzL2Fzc2V0cy9qcy9kYXRlcy5qcyJdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9");
+eval("$('.input-daterange input').each(function() {\r\n    $(this).datepicker('clearDates');\r\n});//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9yZXNvdXJjZXMvYXNzZXRzL2pzL2RhdGVzLmpzP2ZjN2UiXSwic291cmNlc0NvbnRlbnQiOlsiJCgnLmlucHV0LWRhdGVyYW5nZSBpbnB1dCcpLmVhY2goZnVuY3Rpb24oKSB7XHJcbiAgICAkKHRoaXMpLmRhdGVwaWNrZXIoJ2NsZWFyRGF0ZXMnKTtcclxufSk7XG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIHJlc291cmNlcy9hc3NldHMvanMvZGF0ZXMuanMiXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==");
 
 /***/ },
 /* 4 */

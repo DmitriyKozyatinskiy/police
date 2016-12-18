@@ -1,0 +1,1 @@
+{"version":3,"sources":["dates.js"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA","file":"all.js","sourcesContent":["$('.input-daterange input').each(function() {\r\n    $(this).datepicker({\r\n        clearDates: true,\r\n        format: 'yyyy-mm-dd'\r\n    });\r\n});"]}

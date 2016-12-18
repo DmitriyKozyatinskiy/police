@@ -8,10 +8,9 @@
                 <div class="panel-body">
                     Ви увійшли в систему
                     <h4>
-                        <a href="{{ url('/users') }}">Користувачі</a>
-                    </h4>
-                    <h4>
-                        <a href="{{ url('/patrols') }}">Патрулі</a>
+                        <a href="{{ url('/users/show') }}">Користувачі</a>
+                        &nbsp;&nbsp;<a href="{{ url('/patrols/show') }}">Патрулі</a>
+                        &nbsp;&nbsp;<a href="{{ url('/protocols/show') }}">Протоколи</a>
                     </h4>
                 </div>
             </div>

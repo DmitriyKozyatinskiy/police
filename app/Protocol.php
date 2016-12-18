@@ -18,7 +18,7 @@ class Protocol extends Model
     /**
      * The users that belong to the protocol.
      */
-    public function users()
+    public function user()
     {
         return $this->belongsTo('App\User');
     }

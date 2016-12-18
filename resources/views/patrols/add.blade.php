@@ -7,7 +7,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Додати патруль</div>
                     <div class="panel-body">
-                        <form class="form-horizontal" role="form" method="POST" action="{{ url('/add_patrol') }}">
+                        <form class="form-horizontal" role="form" method="POST" action="{{ url('/patrols/add') }}">
                             {{ csrf_field() }}
 
                             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -20,7 +20,7 @@
                                                 {{ $user->name }} ({{ $user->email }})
                                             </div>
                                             <div class="col-xs-4">
-                                                <input type="radio" name="leader" value="{{ $user->id }}">
+                                                <input type="radio" name="leader" value="{{ $user->id }}" checked>
                                                 <span></span>Лідер</span>
                                             </div>
                                         </div>
@@ -42,38 +42,22 @@
                                 </div>
                             </div>
 
-                            <div class="form-group{{ $errors->has('start_date') ? ' has-error' : '' }}">
-                                <label for="start_date" class="col-md-4 control-label">Дата початку патрулювання</label>
-
-                                <div class="col-md-6">
-                                    <input id="start_date" class="form-control" name="start_date" required>
-
-                                    @if ($errors->has('start_date'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('start_date') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                            </div>
-
                             <div class="form-group{{ $errors->has('end_date') ? ' has-error' : '' }}">
-                                <label for="end_date" class="col-md-4 control-label">Дата початку патрулювання</label>
+                                <label for="end_date" class="col-md-4 control-label">Період патрулювання</label>
 
                                 <div class="col-md-6">
-                                    <input id="end_date" class="form-control" name="end_date" required>
-
-                                    @if ($errors->has('end_date'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('end_date') }}</strong>
-                                    </span>
-                                    @endif
+                                    <div class="input-group input-daterange">
+                                        <input id="start_date" name="start_date" type="text" class="form-control">
+                                        <span class="input-group-addon">до</span>
+                                        <input id="end_date" name="end_date" type="text" class="form-control">
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <div class="col-md-6 col-md-offset-4">
                                     <button type="submit" class="btn btn-primary">
-                                        Add patrol
+                                        Додати патруль
                                     </button>
                                 </div>
                             </div>

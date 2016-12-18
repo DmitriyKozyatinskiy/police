@@ -30,4 +30,17 @@ class Patrol extends Model
     {
         return $this->hasMany('App\Protocol');
     }
+
+    /**
+     * The attributes that should be mutated to dates.
+     *
+     * @var array
+     */
+    protected $dates = [
+        'created_at',
+        'updated_at',
+        'deleted_at',
+        'start_date',
+        'end_date'
+    ];
 }

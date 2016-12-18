@@ -35,6 +35,10 @@ class AdminController extends Controller
         ]);
     }
 
+    protected function showUserForm()
+    {
+        return view('users/add');
+    }
 
     /**
      * Create a new user.
@@ -59,7 +63,7 @@ class AdminController extends Controller
     protected function users()
     {
         $users = User::all();
-        return view('admin/users', ['users' => $users]);
+        return view('users/all', ['users' => $users]);
     }
 
     /**
@@ -68,8 +72,7 @@ class AdminController extends Controller
      */
     protected function showPatrolForm()
     {
-        $users = User::all();
-        return view('admin/add_patrol', ['users' => $users]);
+        return view('patrols/add');
     }
 
     /**
@@ -108,6 +111,6 @@ class AdminController extends Controller
             $leader = User::find($patrol->leader);
             $patrol['leader'] = $leader;
         });
-        return view('admin/patrols', ['patrols' => $patrols]);
+        return view('patrols/all', ['patrols' => $patrols]);
     }
 }

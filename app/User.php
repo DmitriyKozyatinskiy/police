@@ -40,6 +40,6 @@ class User extends Authenticatable
      */
     public function protocols()
     {
-        return $this->belongsToMany('App\Protocol');
+        return $this->hasMany('App\Protocol');
     }
 }
