@@ -63,18 +63,18 @@
                                 </div>
                             </div>
 
-                            <div class="form-group{{ $errors->has('tags') ? ' has-error' : '' }}">
-                                <label for="tags" class="col-md-4 control-label">Теги</label>
-                                <div class="col-md-6">
-                                    <input id="tags" class="form-control" name="tags" value="{{ old('tags') }}">
+                            {{--<div class="form-group{{ $errors->has('tags') ? ' has-error' : '' }}">--}}
+                                {{--<label for="tags" class="col-md-4 control-label">Теги</label>--}}
+                                {{--<div class="col-md-6">--}}
+                                    {{--<input id="tags" class="form-control" name="tags" value="{{ old('tags') }}">--}}
 
-                                    @if ($errors->has('tags'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('tags') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                            </div>
+                                    {{--@if ($errors->has('tags'))--}}
+                                        {{--<span class="help-block">--}}
+                                        {{--<strong>{{ $errors->first('tags') }}</strong>--}}
+                                    {{--</span>--}}
+                                    {{--@endif--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
 
                             <div class="form-group">
                                 <div class="col-md-6 col-md-offset-4">
