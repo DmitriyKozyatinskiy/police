@@ -16,7 +16,9 @@
                         </form>
                         <br>
 
-                        <a href="{{ url('/users/add') }}">Додати користувача</a>
+                        @if ($isAdmin)
+                            <a href="{{ url('/users/add') }}">Додати користувача</a>
+                        @endif
                         <br><br>
                         <ul>
                             @foreach ($users as $user)

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\User;
 use App\Patrol;
 use App\Http\Controllers\Controller;
@@ -59,8 +60,10 @@ class UserController extends Controller
                 'protocols' => $protocols
             ]);
         } else {
+            $isAdmin = Auth::user()->role === 'admin';
+
             $users = User::all();
-            return view('users/all', ['users' => $users]);
+            return view('users/all', ['users' => $users, 'isAdmin' => $isAdmin]);
         }
     }
 
@@ -75,6 +78,7 @@ class UserController extends Controller
         } else {
             $users = User::all();
         }
-        return view('users/all', ['users' => $users, 'search' => $data->search]);
+        $isAdmin = Auth::user()->role === 'admin';
+        return view('users/all', ['users' => $users, 'search' => $data->search, 'isAdmin' => $isAdmin]);
     }
 }

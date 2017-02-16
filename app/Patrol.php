@@ -11,9 +11,9 @@ class Patrol extends Model
      *
      * @var array
      */
-//    protected $fillable = [
-//        'name', 'email', 'password', 'role',
-//    ];
+    protected $fillable = [
+        'leader', 'city', 'start_date', 'end_date',
+    ];
 
     /**
      * The users that belong to the patrol.

@@ -13,13 +13,13 @@
                             <li>
                                 Патруль:
                                 <a href="{{ url('patrols/show/' . $patrol->id) }}">
-                                    {{ $patrol->city }} ({{ $patrol->start_date }} - {{ $patrol->end_date }})
+                                    {{ $patrol->city }} ({{ $patrol->start_date->toDateString() }} - {{ $patrol->end_date->toDateString() }})
                                 </a>
                             </li>
                             <li>
                                 Автор: <a href="{{ url('users/show/' . $author->id) }}">{{ $author->name }}</a>
                             </li>
-                            <li>Дата: {{ $protocol->create_date }}</li>
+                            <li>Дата: {{ $protocol->created_at->toDateString() }}</li>
                             <li>Причина: {{ $protocol->purpose }}</li>
                             <li>Злодій: {{ $protocol->violator }}</li>
                             <li>Постраждалий: {{ $protocol->victim }}</li>

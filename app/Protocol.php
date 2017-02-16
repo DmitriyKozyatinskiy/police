@@ -11,9 +11,9 @@ class Protocol extends Model
      *
      * @var array
      */
-//    protected $fillable = [
-//        'name', 'email', 'password', 'role',
-//    ];
+    protected $fillable = [
+        'violator', 'victim', 'purpose', 'address'
+    ];
 
     /**
      * The users that belong to the protocol.

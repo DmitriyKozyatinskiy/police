@@ -7,7 +7,9 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Патрулі</div>
                     <div class="panel-body">
-                        <a href="{{ url('/patrols/add') }}">Додати патруль</a>
+                        @if ($isAdmin)
+                            <a href="{{ url('/patrols/add') }}">Додати патруль</a>
+                        @endif
                         <br><br>
                         <ul>
                         @foreach ($patrols as $patrol)

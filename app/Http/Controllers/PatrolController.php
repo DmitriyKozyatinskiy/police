@@ -77,8 +77,9 @@ class PatrolController extends Controller
                 'isMember' => $isMember
             ]);
         } else {
+            $isAdmin = Auth::user()->role === 'admin';
             $patrols = Patrol::all();
-            return view('patrols/all', ['patrols' => $patrols]);
+            return view('patrols/all', ['patrols' => $patrols, 'isAdmin' => $isAdmin]);
         }
     }
 }
